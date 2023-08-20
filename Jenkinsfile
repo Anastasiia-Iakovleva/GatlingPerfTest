@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Build Maven") {
             steps {
-                sh 'mvn -B clean package'
+                sh 'mvn clean scala:testCompile'
             }
         }
         stage("Run Gatling") {
